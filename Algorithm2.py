@@ -1,19 +1,3 @@
-# alphabets = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p","q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
-# def vegenere_enc(key, plain_text):
-#     cipher_text = ""
-#     iterator = 0
-#     for x in range(0, len(plain_text)):
-#         index_1 = alphabets.index(key[iterator])
-#         index_2 = alphabets.index(plain_text[x])
-#         cipher_text += alphabets[(index_1 + index_2) % 26]
-#         if iterator % 26 != 0 and iterator != 0:
-#             iterator += 1
-#         else:
-#             iterator = 0
-#     print(cipher_text)
-#     return cipher_text
-
-# #or
 
 def fence_enc(depth: int, plain_text: str):
     mat = []
@@ -39,14 +23,3 @@ def fence_enc(depth: int, plain_text: str):
             if mat[x][y] != '_':
                 cipher_text += mat[x][y]
     return cipher_text
-
-#plain text:
-#53229150475050194141565339280050449081308650241130
-#cipher text:
-#55383300390110251529312796840494450482101100605455
-#key:
-#7
-# plaintext = "17820305457150318"
-# key = 3
-# cipher = fence_enc(key, plaintext)
-# print(cipher)

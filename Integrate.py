@@ -3,7 +3,7 @@ import Algorithm2
 import Algorithm3
 
 plaintext1 = "86"
-key1 = "56"
+key1 = "65"
 C1=Algorithm1.one_time_pad_enc(key1, plaintext1)
 print("C1: ",C1)
 
@@ -28,9 +28,8 @@ for i in range(len(chunks)):
     # remove the chunk from the message
     C2=C2[chunks[i]:]
     # decrypt the chunk
-    # print("chunk: ",chunk)
-    m=str(Algorithm3.elgamal_decrypt( C1, chunk,Xa,q))
-    # print("m: ",m)
+    # converrt m from ascii to char
+    m=chr(Algorithm3.elgamal_decrypt( C1, chunk,Xa,q))
     message+=m
     
 print("Message: ",message)

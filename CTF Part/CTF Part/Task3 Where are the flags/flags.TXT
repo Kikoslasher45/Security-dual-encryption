@@ -1,0 +1,3 @@
+CMP{yellow joy}
+CMP{Turn Lights OFF}
+CMP{you_Catched_ME}
